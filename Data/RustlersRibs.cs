@@ -30,5 +30,18 @@ namespace CowboyCafe.Data
                 return 894;
             }
         }
+
+        /// <summary>
+        /// Special instructions for the preparation of the chili
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                var instructions = new List<string>();
+
+                return instructions;
+            }
+        }
     }
 }
