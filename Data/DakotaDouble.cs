@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Dakota Double entree
     /// </summary>
-    class DakotaDouble
+    public class DakotaDouble
     {
         private bool ketchup = true;
         /// <summary>
