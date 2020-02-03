@@ -9,56 +9,46 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CornDodgers : Side
     {
-        public Size size = Size.Small;
-        /// <summary>
-        /// Gets the size of the Corn Dodgers
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                if (value == Size.Small)
-                {
-                    price = 1.59;
-                    calories = 512;
-                }
-                else if (value == Size.Medium)
-                {
-                    price = 1.79;
-                    calories = 685;
-                }
-                else if (value == Size.Large)
-                {
-                    price = 1.99;
-                    calories = 717;
-                }
-                else
-                {
-                    throw new NotImplementedException();
-                }
-                size = value;
-            }
-        }
-
-        public double price = 1.59;
         /// <summary>
         /// Gets the price of the Corn Dodgers
         /// </summary>
         public override double Price
         {
-            get { return price; }
-            set { price = value; }
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small:
+                        return 1.59;
+                    case Size.Medium:
+                        return 1.79;
+                    case Size.Large:
+                        return 1.99;
+                    default:
+                        throw new NotImplementedException();
+                }
+            }
         }
 
-        public uint calories = 512;
         /// <summary>
         /// Gets the calories of Corn Dodgers
         /// </summary>
         public override uint Calories
         {
-            get { return calories; }
-            set { calories = value; }
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small:
+                        return 512;
+                    case Size.Medium:
+                        return 685;
+                    case Size.Large:
+                        return 717;
+                    default:
+                        throw new NotImplementedException();
+                }
+            }
         }
     }
 }
