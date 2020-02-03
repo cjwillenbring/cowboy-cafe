@@ -13,7 +13,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Gets the size of the Baked Beans
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get { return size; }
             set
@@ -28,10 +28,14 @@ namespace CowboyCafe.Data
                     price = 1.79;
                     calories = 378;
                 }
-                else
+                else if (value == Size.Large)
                 {
                     price = 1.99;
                     calories = 410;
+                }
+                else
+                {
+                    throw new NotImplementedException();
                 }
                 size = value;
             }
@@ -41,7 +45,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Gets the price of the Baked Beans
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return price; }
             set { price = value; }
@@ -51,7 +55,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Gets the calories of Baked Beans
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return calories; }
             set { calories = value; }
