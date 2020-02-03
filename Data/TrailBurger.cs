@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Trail Burger entree
     /// </summary>
-    public class TrailBurger
+    public class TrailBurger : Entree
     {
         private bool bun = true;
         /// <summary>

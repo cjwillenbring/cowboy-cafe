@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Texas Triple entree
     /// </summary>
-    public class TexasTripleBurger
+    public class TexasTripleBurger : Entree
     {
         private bool bun = true;
         /// <summary>
