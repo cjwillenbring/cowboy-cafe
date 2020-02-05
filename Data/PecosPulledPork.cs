@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Pecos Pulled Pork
+* Purpose: Holds the class logic for the Pecos Pulled Pork entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

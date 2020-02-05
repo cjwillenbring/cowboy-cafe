@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Baked Beans
+* Purpose: Holds the class logic for the Baked Beans side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

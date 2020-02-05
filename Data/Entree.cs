@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Entree
+* Purpose: Abstract base class representing an entree that the diner serves
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

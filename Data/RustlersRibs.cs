@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Rustlers Ribs
+* Purpose: Holds the class logic for the Rustler's Ribs entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

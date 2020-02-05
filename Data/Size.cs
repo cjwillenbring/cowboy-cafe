@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Cole Willenbring
+* Class: N/A
+* Purpose: Enumerator for the portion size
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

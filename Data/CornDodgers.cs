@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Corn Dodgers
+* Purpose: Holds the class logic for the Corn Dodger side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

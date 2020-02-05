@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Cole Willenbring
+* Class: Cowpoke Chili
+* Purpose: Holds the class logic for the Cowpoke Chili entree
+*/
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

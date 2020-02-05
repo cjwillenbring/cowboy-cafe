@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Texas Triple Burger
+* Purpose: Holds the class logic for the Texas Triple Burger entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

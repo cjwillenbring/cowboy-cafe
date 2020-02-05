@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Dakota Double Burger
+* Purpose: Holds the class logic for the Dakota Double Burger entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

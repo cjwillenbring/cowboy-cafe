@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Angry Chicken
+* Purpose: Holds the class logic for the Angry Chicken entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

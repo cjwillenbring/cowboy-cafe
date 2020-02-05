@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Chili Cheese Fries
+* Purpose: Holds the class logic for the Chili Cheese Fries side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

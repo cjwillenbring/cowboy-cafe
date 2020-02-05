@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Cole Willenbring
+* Class: Side
+* Purpose: Abstract base class for the diner's side dishes
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

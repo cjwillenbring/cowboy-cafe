@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Pan De Campo
+* Purpose: Holds the class logic for the Pan de Campos side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

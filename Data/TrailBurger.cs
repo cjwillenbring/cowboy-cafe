@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: Trail Burger
+* Purpose: Holds the class logic for the Trail Burger entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
