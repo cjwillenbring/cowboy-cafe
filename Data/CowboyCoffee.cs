@@ -1,7 +1,7 @@
 ﻿/*
 * Author: Cole Willenbring
-* Class: Jerked Soda
-* Purpose: Holds the class logic for the Jerked Soda drink
+* Class: Cowboy Coffee
+* Purpose: Holds the class logic for the Cowboy Coffee drink
 */
 using System;
 using System.Collections.Generic;
@@ -10,17 +10,22 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A class representing the Jerked Soda drink
+    /// A class representing the Cowboy Coffee drink
     /// </summary>
-    public class JerkedSoda : Drink
+    public class CowboyCoffee : Drink
     {
         /// <summary>
-        /// The flavor of the soda
+        /// Whether or not the coffee should be decaf
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public bool Decaf { get; set; }
 
         /// <summary>
-        /// Gets the price of the Jerked Soda
+        /// Whether or not to leave room for cream
+        /// </summary>
+        public bool RoomForCream { get; set; }
+
+        /// <summary>
+        /// Gets the price of the coffee
         /// </summary>
         public override double Price
         {
@@ -29,11 +34,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 1.59;
+                        return 0.60;
                     case Size.Medium:
-                        return 2.10;
+                        return 1.10;
                     case Size.Large:
-                        return 2.59;
+                        return 1.60;
                     default:
                         throw new NotImplementedException();
                 }
@@ -41,7 +46,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Gets the calories of Jerked Soda
+        /// Gets the calories of coffee
         /// </summary>
         public override uint Calories
         {
@@ -50,11 +55,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 110;
+                        return 3;
                     case Size.Medium:
-                        return 146;
+                        return 5;
                     case Size.Large:
-                        return 198;
+                        return 7;
                     default:
                         throw new NotImplementedException();
                 }
@@ -62,7 +67,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Gets the special instructions for the jerked soda
+        /// Gets the special instructions for the coffee
         /// </summary>
         public override List<string> SpecialInstructions
         {
@@ -70,7 +75,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Ice) instructions.Add("hold ice");
+                if (Ice) instructions.Add("Add ice");
+                if (RoomForCream) instructions.Add("Room for Cream");
 
                 return instructions;
             }
