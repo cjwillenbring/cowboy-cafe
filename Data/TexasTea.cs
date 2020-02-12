@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Texas Tea drink
     /// </summary>
-    class TexasTea : Drink
+    public class TexasTea : Drink
     {
         /// <summary>
         /// Whether or not the tea should have a lemon
@@ -22,7 +22,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Whether or not the tea is sweet
         /// </summary>
-        public bool Sweet { get; set; }
+        public bool Sweet { get; set; } = true;
 
         /// <summary>
         /// Gets the price of the tea
@@ -55,11 +55,14 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 10;
+                        if (Sweet) return 10;
+                        return 5;
                     case Size.Medium:
-                        return 22;
+                        if (Sweet) return 22;
+                        return 11;
                     case Size.Large:
-                        return 36;
+                        if (Sweet) return 36;
+                        return 18;
                     default:
                         throw new NotImplementedException();
                 }
@@ -75,8 +78,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Ice) instructions.Add("Hold ice");
-                if (Lemon) instructions.Add("Add lemon");
+                if (!Ice) instructions.Add("Hold Ice");
+                if (Lemon) instructions.Add("Add Lemon");
 
                 return instructions;
             }

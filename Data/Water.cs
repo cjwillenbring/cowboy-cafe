@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Water drink
     /// </summary>
-    class Water
+    public class Water : Drink
     {
         /// <summary>
         /// Whether or not the water should have a lemon
@@ -70,8 +70,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!Ice) instructions.Add("Hold ice");
-                if (Lemon) instructions.Add("Add lemon");
+                if (!Ice) instructions.Add("Hold Ice");
+                if (Lemon) instructions.Add("Add Lemon");
 
                 return instructions;
             }

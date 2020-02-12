@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A base class representing a drink
     /// </summary>
-    abstract class Drink
+    public abstract class Drink
     {
         /// <summary>
         /// Gets the size of the drink
