@@ -81,5 +81,31 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the cowboy coffee drink with the size and if it is caffeinated or not.</returns>
+        public override string ToString()
+        {
+            string s = "";
+            switch (Size)
+            {
+                case Size.Small:
+                    s = "Small";
+                    break;
+                case Size.Medium:
+                    s = "Medium";
+                    break;
+                case Size.Large:
+                    s = "Large";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            string c = "";
+            if (Decaf) c = " Decaf";
+            return s + c + " Cowboy Coffee";
+        }
     }
 }

@@ -48,5 +48,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the Rustler's Ribs entree.</returns>
+        public override string ToString()
+        {
+            return "Rustler's Ribs";
+        }
     }
 }

@@ -84,5 +84,29 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the texas tea drink with the size.</returns>
+        public override string ToString()
+        {
+            string s = "";
+            switch (Size)
+            {
+                case Size.Small:
+                    s = "Small";
+                    break;
+                case Size.Medium:
+                    s = "Medium";
+                    break;
+                case Size.Large:
+                    s = "Large";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            return s + " Texas Tea";
+        }
     }
 }

@@ -75,5 +75,50 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the jerked soda with the size and flavor.</returns>
+        public override string ToString()
+        {
+            string s = "";
+            switch (Size)
+            {
+                case Size.Small:
+                    s = "Small";
+                    break;
+                case Size.Medium:
+                    s = "Medium";
+                    break;
+                case Size.Large:
+                    s = "Large";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            string f = "";
+            switch (Flavor)
+            {
+                case SodaFlavor.BirchBeer:
+                    f = "Birch Beer";
+                    break;
+                case SodaFlavor.Sarsparilla:
+                    f = "Sarsparilla";
+                    break;
+                case SodaFlavor.RootBeer:
+                    f = "Root Beer";
+                    break;
+                case SodaFlavor.CreamSoda:
+                    f = "Cream Soda";
+                    break;
+                case SodaFlavor.OrangeSoda:
+                    f = "Orange Soda";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            return s + " " + f + " Jerked Soda";
+        }
     }
 }

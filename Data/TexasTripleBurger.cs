@@ -159,5 +159,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the texas triple burger entree.</returns>
+        public override string ToString()
+        {
+            return "Texas Triple Burger";
+        }
     }
 }

@@ -55,5 +55,29 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        /// <summary>
+        /// Override the ToString() method for POS use
+        /// </summary>
+        /// <returns>The string name of the chili cheese fries side with the size.</returns>
+        public override string ToString()
+        {
+            string s = "";
+            switch (Size)
+            {
+                case Size.Small:
+                    s = "Small";
+                    break;
+                case Size.Medium:
+                    s = "Medium";
+                    break;
+                case Size.Large:
+                    s = "Large";
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            return s + " Chili Cheese Fries";
+        }
     }
 }
