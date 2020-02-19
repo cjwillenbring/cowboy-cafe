@@ -106,7 +106,10 @@ namespace CowboyCafe.Data
                 default:
                     throw new NotImplementedException();
             }
-            return s + " Texas Tea";
+            string sweet = "";
+            if (Sweet) sweet = "Sweet";
+            else sweet = "Plain";
+            return s + " Texas " + sweet + " Tea";
         }
     }
 }
