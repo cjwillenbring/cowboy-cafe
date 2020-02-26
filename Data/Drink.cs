@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A base class representing a drink
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         /// <summary>
         /// Gets the size of the drink
@@ -33,6 +33,11 @@ namespace CowboyCafe.Data
         /// Gets the special instructions of for the preparation of the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        /// <summary>
+        /// Implement the IOrderItem interface with the current List<string> implementation
+        /// </summary>
+        IEnumerable<string> IOrderItem.SpecialInstructions => SpecialInstructions;
 
         /// <summary>
         /// Gets whether or not the drink contains ice;
