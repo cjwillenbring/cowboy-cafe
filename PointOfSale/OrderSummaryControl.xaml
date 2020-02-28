@@ -10,13 +10,17 @@
         <Style TargetType="ListBoxItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+            <Setter Property="MaxHeight" Value="400px"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <StackPanel>
             <TextBlock>
                 Order Number<TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
             </TextBlock>
-            <ListBox ItemsSource="{Binding Path=Items}">
+            <ListBox ItemsSource="{Binding Path=Items}" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -24,9 +28,13 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="{Binding}"/>
-                            <TextBlock Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}"/>
-                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}"/>
+                            <ListBox Grid.Row="1" ItemsSource="{Binding Path=SpecialInstructions}"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
