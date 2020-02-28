@@ -7,49 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="980" d:DesignWidth="1400">
     <UserControl.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
         <Style TargetType="Button">
             <Setter Property="Height" Value="50px"/>
             <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Margin" Value="3px"/>
+            <Setter Property="Margin" Value="5px"/>
         </Style>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center">Entree</TextBlock>
-            <Button Name="AddCowpokeChiliButton">Cowpoke Chili</Button>
-            <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
-            <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
-            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
-            <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
-            <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
-            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left" Width="1000">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Click="OnItemSelectionClick">Item Selection</Button>
+                <Button Grid.Column="1" Click="OnCancelOrderClick">Cancel Order</Button>
+                <Button Grid.Column="2" Click="OnCompleteOrderClick">Complete Order</Button>
+            </Grid>
+            <local:MenuItemSelectionControl DockPanel.Dock="Left" Margin="20"/>
         </StackPanel>
-        <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Sides</TextBlock>
-            <Button Name="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
-            <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
-            <Button Name="AddPandeCampoButton">Pan de Campo</Button>
-            <Button Name="AddBakedBeansButton">Baked Beans</Button>
-        </StackPanel>
-        <StackPanel Grid.Column="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
-            <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
-            <Button Name="AddTexasTeaButton">Texas Tea</Button>
-            <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
-            <Button Name="AddWaterButton">Water</Button>
-        </StackPanel>
-        <StackPanel Grid.Column="3">
-            <TextBlock TextAlignment="Center">Order</TextBlock>
-            <ListView Name="OrderListView" Height="500px" Width="350px"></ListView>
-        </StackPanel>
-    </Grid>
+        <local:OrderSummaryControl DockPanel.Dock="Right" Margin="20"/>
+    </DockPanel>
 </UserControl>

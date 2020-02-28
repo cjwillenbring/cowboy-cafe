@@ -46,15 +46,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The OrderNumber of the current order.
         /// </summary>
-        public uint OrderNumber { get; }
-
-        /// <summary>
-        /// Constructor for setting the current order number and incrementing the last order number.
-        /// </summary>
-        public Order()
-        {
-            OrderNumber = lastOrderNumber++;
-        }
+        public uint OrderNumber { get; } = lastOrderNumber++;
 
         /// <summary>
         /// The eventhandler type for handling the property change events.
@@ -68,6 +60,7 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
 
@@ -78,6 +71,7 @@ namespace CowboyCafe.Data
         public void Remove(IOrderItem item)
         {
             items.Remove(item);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
     }
