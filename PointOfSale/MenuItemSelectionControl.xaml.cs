@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: MenuItemSelectionControl
+* Purpose: Holds the logic for the menu item selection control ui
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        /// <summary>
+        /// Constructor for the menu item selection ui component
+        /// </summary>
         public MenuItemSelectionControl()
         {
             InitializeComponent();

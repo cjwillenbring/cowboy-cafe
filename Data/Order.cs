@@ -1,7 +1,7 @@
 ﻿/*
 * Author: Cole Willenbring
 * Class: Order
-* Purpose: Holds the logic for the IOrderItem interface
+* Purpose: Holds the logic for the diner's order class
 */
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,9 @@ using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// The class for holding order information.
+    /// </summary>
     public class Order : INotifyPropertyChanged
     {
         /// <summary>

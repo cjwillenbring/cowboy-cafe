@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: OrderControl
+* Purpose: Holds the ui logic for the order control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

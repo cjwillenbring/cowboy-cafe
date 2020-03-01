@@ -33,14 +33,14 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding}"/>
-                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" TextAlignment="Right"/>
                             <ListBox Grid.Row="1" ItemsSource="{Binding Path=SpecialInstructions}"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
             <TextBlock>
-                Subtotal: <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}"></TextBlock>
+                Subtotal: <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" TextAlignment="Right"></TextBlock>
             </TextBlock>
         </StackPanel>
     </Grid>
