@@ -18,7 +18,7 @@
     <Grid>
         <StackPanel>
             <TextBlock>
-                Order Number<TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
+                Order Number: <TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
             </TextBlock>
             <ListBox ItemsSource="{Binding Path=Items}" >
                 <ListBox.ItemTemplate>
