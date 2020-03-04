@@ -24,6 +24,8 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        private OrderControl orderControl;
+
         /// <summary>
         /// Constructor for the menu item selection ui component
         /// </summary>
@@ -56,7 +58,12 @@ namespace PointOfSale
         {
             if(DataContext is Order data)
             {
-                data.Add(new CowpokeChili());
+                var newChili = new CowpokeChili();
+                var screen = new CustomizeCowpokeChili();
+                screen.DataContext = newChili;
+                data.Add(newChili);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 

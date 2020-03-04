@@ -25,7 +25,9 @@
                 <Button Grid.Column="1" Click="OnCancelOrderClick">Cancel Order</Button>
                 <Button Grid.Column="2" Click="OnCompleteOrderClick">Complete Order</Button>
             </Grid>
-            <local:MenuItemSelectionControl DockPanel.Dock="Left" Margin="20"/>
+            <Border x:Name="Container" Grid.Column="0" Grid.Row="1">
+                <local:MenuItemSelectionControl DockPanel.Dock="Left" Margin="20"/>
+            </Border>
         </StackPanel>
         <local:OrderSummaryControl DockPanel.Dock="Right" Margin="20"/>
     </DockPanel>
