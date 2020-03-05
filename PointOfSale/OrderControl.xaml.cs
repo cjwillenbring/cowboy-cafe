@@ -36,12 +36,25 @@ namespace PointOfSale
         }
 
         /// <summary>
+        /// Bubble up changes to the order
+        /// </summary>
+        public void OnItemChanged()
+        {
+            if(DataContext is Order data) 
+            {
+                data.UpdateItems();
+            }
+        }
+
+        /// <summary>
         /// Handles the click event for the item selection button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         void OnItemSelectionClick(object sender, RoutedEventArgs e)
         {
+            var selectScreen = new MenuItemSelectionControl();
+            SwapScreen(selectScreen);
             return;
         }
 

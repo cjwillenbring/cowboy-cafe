@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizeCowpokeChili.xaml
+    /// Interaction logic for CustomizeAngryChicken.xaml
     /// </summary>
-    public partial class CustomizeCowpokeChili : UserControl
+    public partial class CustomizeAngryChicken : UserControl
     {
         /// <summary>
-        /// Constructor for the Cowpoke Chili Customization Component
+        /// Constructor for the Angry Chicken Customization Component
         /// </summary>
-        public CustomizeCowpokeChili()
+        public CustomizeAngryChicken()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace PointOfSale
         void OnEventChange(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<OrderControl>();
-            if(orderControl is OrderControl oC)
+            if (orderControl is OrderControl oC)
             {
                 oC.OnItemChanged();
             }

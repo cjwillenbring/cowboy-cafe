@@ -77,5 +77,14 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
+
+        /// <summary>
+        /// Updates the items and the totals in the summary box
+        /// </summary>
+        public void UpdateItems()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+        }
     }
 }

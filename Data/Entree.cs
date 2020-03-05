@@ -5,6 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -13,7 +14,7 @@ namespace CowboyCafe.Data
     /// A base class representing an entree
     /// </summary>
     public abstract class Entree : IOrderItem
-    {
+    { 
         /// <summary>
         /// Gets the price of the entree
         /// </summary>

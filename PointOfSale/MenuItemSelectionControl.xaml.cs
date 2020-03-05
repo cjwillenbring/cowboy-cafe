@@ -141,7 +141,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new AngryChicken());
+                var newChicken = new AngryChicken();
+                var screen = new CustomizeAngryChicken();
+                screen.DataContext = newChicken;
+                data.Add(newChicken);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
