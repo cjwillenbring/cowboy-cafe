@@ -4,27 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
+             xmlns:local1="clr-namespace:CowboyCafe.Data;assembly=CowboyCafe.Data"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Window.Resources>
-        <ObjectDataProvider MethodName="GetValues"
-                        ObjectType="{x:Type sys:Enum}"
-                        x:Key="AlignmentValues">
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="HorizontalAlignment" />
+                <x:Type TypeName="local1:SodaFlavor"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-    </Window.Resources>
+        <ObjectDataProvider x:Key="dataFromEnum2" MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local1:Size"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
 
-    <Border Margin="10" BorderBrush="Aqua"
-          BorderThickness="3" Padding="8">
+    <Grid>
+
         <StackPanel Width="300">
-            <TextBlock>Choose the HorizontalAlignment value of the Button:</TextBlock>
+            <TextBlock FontSize="20">Customize The Jerked Soda: </TextBlock>
+            <TextBlock>Choose the Flavor value of the Soda:</TextBlock>
             <ListBox Name="myComboBox" SelectedIndex="0" Margin="8"
-               ItemsSource="{Binding Source={StaticResource AlignmentValues}}"/>
-            <Button Content="Click Me!"
-              HorizontalAlignment="{Binding ElementName=myComboBox,
-                                            Path=SelectedItem}"/>
+               ItemsSource="{Binding Source={StaticResource dataFromEnum}}" 
+               SelectedItem="{Binding Path=Flavor}"/>
+            <Button Content="Click To Select Flavor" Name="FlavorBtn" Click="OnEventChange"/>
+            
+            <TextBlock>Choose the Size value of the Drink:</TextBlock>
+            <ListBox Name="myComboBox1" SelectedIndex="0" Margin="8"
+               ItemsSource="{Binding Source={StaticResource dataFromEnum2}}"
+                SelectedItem="{Binding Path=Size}"/>
+            <Button Content="Click To Select Size" Name="SizeBtn" Click="OnEventChange"/>
         </StackPanel>
-    </Border>
+    </Grid>
 </UserControl>

@@ -211,7 +211,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new JerkedSoda());
+                var newJerkedSoda = new JerkedSoda();
+                var screen = new CustomizeJerkedSoda();
+                screen.DataContext = newJerkedSoda;
+                data.Add(newJerkedSoda);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 

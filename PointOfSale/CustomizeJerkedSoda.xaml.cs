@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CowboyCafe.Data;
 
 namespace PointOfSale
 {
@@ -21,6 +22,20 @@ namespace PointOfSale
         public CustomizeJerkedSoda()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Bubble up changes to the Order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void OnEventChange(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (orderControl is OrderControl oC)
+            {
+                oC.OnItemChanged();
+            }
         }
     }
 }
