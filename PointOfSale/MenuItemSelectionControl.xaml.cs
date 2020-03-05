@@ -76,7 +76,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new RustlersRibs());
+                var newRustlersRibs = new RustlersRibs();
+                var screen = new CustomizeRustlersRibs();
+                screen.DataContext = newRustlersRibs;
+                data.Add(newRustlersRibs);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -89,7 +94,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new PecosPulledPork());
+                var newPulledPork = new PecosPulledPork();
+                var screen = new CustomizePecosPulledPork();
+                screen.DataContext = newPulledPork;
+                data.Add(newPulledPork);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -102,7 +112,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new TrailBurger());
+                var newTrailBurger = new TrailBurger();
+                var screen = new CustomizeTrailBurger();
+                screen.DataContext = newTrailBurger;
+                data.Add(newTrailBurger);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -115,7 +130,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new DakotaDoubleBurger());
+                var newDakotaDouble = new DakotaDoubleBurger();
+                var screen = new CustomizeDakotaDoubleBurger();
+                screen.DataContext = newDakotaDouble;
+                data.Add(newDakotaDouble);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -128,7 +148,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new TexasTripleBurger());
+                var newTexasTripleBurger = new TexasTripleBurger();
+                var screen = new CustomizeTexasTripleBurger();
+                screen.DataContext = newTexasTripleBurger;
+                data.Add(newTexasTripleBurger);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -159,7 +184,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new ChiliCheeseFries());
+                var newChiliCheeseFries = new ChiliCheeseFries();
+                var screen = new CustomizeChiliCheeseFries();
+                screen.DataContext = newChiliCheeseFries;
+                data.Add(newChiliCheeseFries);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -172,7 +202,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new CornDodgers());
+                var newCornDodgers = new CornDodgers();
+                var screen = new CustomizeCornDodgers();
+                screen.DataContext = newCornDodgers;
+                data.Add(newCornDodgers);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -185,7 +220,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new PanDeCampo());
+                var newPanDeCampo = new PanDeCampo();
+                var screen = new CustomizePanDeCampo();
+                screen.DataContext = newPanDeCampo;
+                data.Add(newPanDeCampo);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -198,7 +238,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new BakedBeans());
+                var newBakedBeans = new BakedBeans();
+                var screen = new CustomizeBakedBeans();
+                screen.DataContext = newBakedBeans;
+                data.Add(newBakedBeans);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -229,7 +274,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new TexasTea());
+                var newTexasTea = new TexasTea();
+                var screen = new CustomizeTexasTea();
+                screen.DataContext = newTexasTea;
+                data.Add(newTexasTea);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
@@ -242,7 +292,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new CowboyCoffee());
+                var newCowboyCoffee = new CowboyCoffee();
+                var screen = new CustomizeCowboyCoffee();
+                screen.DataContext = newCowboyCoffee;
+                data.Add(newCowboyCoffee);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
 
