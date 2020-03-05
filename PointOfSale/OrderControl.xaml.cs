@@ -79,7 +79,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// 
+        /// Handles the screen swap between selection screens
         /// </summary>
         /// <param name="element"></param>
         public void SwapScreen(UIElement element)

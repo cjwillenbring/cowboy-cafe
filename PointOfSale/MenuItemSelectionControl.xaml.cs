@@ -255,7 +255,12 @@ namespace PointOfSale
         {
             if (DataContext is Order data)
             {
-                data.Add(new Water());
+                var newWater = new Water();
+                var screen = new CustomizeWater();
+                screen.DataContext = newWater;
+                data.Add(newWater);
+                orderControl = this.FindAncestor<OrderControl>();
+                orderControl.SwapScreen(screen);
             }
         }
     }

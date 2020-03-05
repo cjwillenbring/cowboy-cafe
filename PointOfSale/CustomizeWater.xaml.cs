@@ -10,19 +10,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CowboyCafe.Data;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizeJerkedSoda.xaml
+    /// Interaction logic for CustomizeWater.xaml
     /// </summary>
-    public partial class CustomizeJerkedSoda : UserControl
+    public partial class CustomizeWater : UserControl
     {
-        /// <summary>
-        /// Constructor for the CustomizeJerkedSoda Class
-        /// </summary>
-        public CustomizeJerkedSoda()
+        public CustomizeWater()
         {
             InitializeComponent();
         }

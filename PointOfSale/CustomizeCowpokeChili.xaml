@@ -6,18 +6,13 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Height="200" VerticalAlignment="Top">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="30" Text="Cowpoke Chili Customization" Grid.Row="0"></TextBlock>
-        <ToggleButton IsChecked="{Binding Path=GreenOnions}" Grid.Row="1" Click="OnEventChange">Green Onion</ToggleButton>
-        <ToggleButton IsChecked="{Binding Path=Cheese}" Grid.Row="2" Click="OnEventChange">Cheese</ToggleButton>
-        <ToggleButton IsChecked="{Binding Path=TortillaStrips}" Grid.Row="3" Click="OnEventChange">Tortilla Strips</ToggleButton>
-        <ToggleButton IsChecked="{Binding Path=SourCream}" Grid.Row="4" Click="OnEventChange">Sour Cream</ToggleButton>
+    <Grid >
+        <StackPanel Width="300">
+            <TextBlock FontSize="20" Text="Cowpoke Chili Customization"></TextBlock>
+            <ToggleButton IsChecked="{Binding Path=GreenOnions}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Green Onion</ToggleButton>
+            <ToggleButton IsChecked="{Binding Path=Cheese}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Cheese</ToggleButton>
+            <ToggleButton IsChecked="{Binding Path=TortillaStrips}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Tortilla Strips</ToggleButton>
+            <ToggleButton IsChecked="{Binding Path=SourCream}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Sour Cream</ToggleButton>
+        </StackPanel>
     </Grid>
 </UserControl>
