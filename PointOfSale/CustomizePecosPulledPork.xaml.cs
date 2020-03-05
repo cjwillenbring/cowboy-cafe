@@ -18,9 +18,26 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizePecosPulledPork : UserControl
     {
+        /// <summary>
+        /// Constructor for the CustomizePecosPulledPork Control
+        /// </summary>
         public CustomizePecosPulledPork()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Bubble up changes to the Order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void OnEventChange(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (orderControl is OrderControl oC)
+            {
+                oC.OnItemChanged();
+            }
         }
     }
 }
