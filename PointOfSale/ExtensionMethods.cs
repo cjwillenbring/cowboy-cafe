@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: ExtensionMethods
+* Purpose: Holds the class logic for the POS extension methods
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -6,6 +11,9 @@ using System.Windows.Media;
 
 namespace PointOfSale
 {
+    /// <summary>
+    /// Holds the extension method logic for the POS namespace
+    /// </summary>
     public static class ExtensionMethods
     {
         /// <summary>

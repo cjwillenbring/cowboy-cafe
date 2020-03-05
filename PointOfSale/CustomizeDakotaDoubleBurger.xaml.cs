@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: CustomizeDakotaDoubleBurger
+* Purpose: Holds the class logic for the dakota double burger customization screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

@@ -26,14 +26,14 @@
     <Grid>
 
         <StackPanel Width="300">
-            <TextBlock FontSize="20">Customize The Jerked Soda: </TextBlock>
-            <TextBlock FontSize="18">Choose the Flavor value of the Soda:</TextBlock>
+            <TextBlock FontSize="20" TextWrapping="Wrap">Customize The Jerked Soda: </TextBlock>
+            <TextBlock FontSize="18" TextWrapping="Wrap">Choose the Flavor value of the Soda:</TextBlock>
             <ListBox Name="myComboBox" Margin="0 5 0 0"
                ItemsSource="{Binding Source={StaticResource dataFromEnum}}" 
                SelectedItem="{Binding Path=Flavor}"/>
             <Button Content="Click To Select Flavor" Name="FlavorBtn" Click="OnEventChange"/>
 
-            <TextBlock FontSize="18">Choose the Size value of the Drink:</TextBlock>
+            <TextBlock FontSize="18" TextWrapping="Wrap">Choose the Size value of the Drink:</TextBlock>
             <ListBox Name="myComboBox1" Margin="0 5 0 0"
                ItemsSource="{Binding Source={StaticResource dataFromEnum2}}"
                 SelectedItem="{Binding Path=Size}"/>

@@ -17,7 +17,7 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel>
-            <TextBlock>
+            <TextBlock FontSize="25">
                 Order Number: <TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
             </TextBlock>
             <ListBox ItemsSource="{Binding Path=Items}" >
@@ -26,20 +26,22 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding}"/>
-                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" TextAlignment="Right"/>
-                            <ListBox Grid.Row="1" ItemsSource="{Binding Path=SpecialInstructions}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="0"  FontSize="14" Text="{Binding}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1"  FontSize="14" Text="{Binding Path=Price, StringFormat=c}" TextAlignment="Right"/>
+                            <Button Grid.Column="2" Click="OnRemoveItem" FontSize="14" Height="25" Width="25" VerticalContentAlignment="Top">x</Button>
+                            <ListBox Grid.Row="1" FontSize="12" ItemsSource="{Binding Path=SpecialInstructions}"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock>
+            <TextBlock FontSize="25">
                 Subtotal: <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" TextAlignment="Right"></TextBlock>
             </TextBlock>
         </StackPanel>

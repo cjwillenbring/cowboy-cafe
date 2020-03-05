@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: CustomizeCowboyCoffee
+* Purpose: Holds the class logic for the cowboy coffee customization screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

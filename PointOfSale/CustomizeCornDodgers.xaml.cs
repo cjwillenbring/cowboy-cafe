@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: CustomizeCornDodgers
+* Purpose: Holds the class logic for the corn dodgers customization screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

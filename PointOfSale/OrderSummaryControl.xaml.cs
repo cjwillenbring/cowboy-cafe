@@ -24,9 +24,31 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
+        /// <summary>
+        /// Constructor for the OrderSummaryControl
+        /// </summary>
         public OrderSummaryControl()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Function to remove an item from the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void OnRemoveItem(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is Order data)
+            {
+                if(sender is Button s)
+                {
+                    if(s.DataContext is IOrderItem item)
+                    {
+                        data.Remove(item);
+                    }
+                }
+            }
         }
     }
 }

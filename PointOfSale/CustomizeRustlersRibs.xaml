@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Width="300">
-            <TextBlock FontSize="18">No Customizations For Ruster's Ribs</TextBlock>
+            <TextBlock FontSize="18" TextWrapping="Wrap">No Customizations For Ruster's Ribs</TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>

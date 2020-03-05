@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: MainWindow
+* Purpose: Holds the class logic for the main window screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +26,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Public constructor for the MainWindow
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

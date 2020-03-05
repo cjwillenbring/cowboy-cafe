@@ -24,6 +24,10 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        /// <summary>
+        /// Order control property used for persisting changes in child elements 
+        /// up to the parent window control elements
+        /// </summary>
         private OrderControl orderControl;
 
         /// <summary>
@@ -32,21 +36,6 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
-            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-            AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
-            AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
-            AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
-            AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
-            AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
-            AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
-            AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
-            AddPandeCampoButton.Click += OnAddPandeCampoButtonClicked;
-            AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
-            AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
-            AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
-            AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
-            AddWaterButton.Click += OnAddWaterButtonClicked;
         }
 
         /// <summary>

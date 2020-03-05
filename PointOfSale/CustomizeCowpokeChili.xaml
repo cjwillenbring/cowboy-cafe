@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid >
         <StackPanel Width="300">
-            <TextBlock FontSize="20" Text="Cowpoke Chili Customization"></TextBlock>
+            <TextBlock FontSize="20" Text="Cowpoke Chili Customization" TextWrapping="Wrap"></TextBlock>
             <ToggleButton IsChecked="{Binding Path=GreenOnions}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Green Onion</ToggleButton>
             <ToggleButton IsChecked="{Binding Path=Cheese}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Cheese</ToggleButton>
             <ToggleButton IsChecked="{Binding Path=TortillaStrips}" Click="OnEventChange" Height="30" Margin="0 10 0 0">Tortilla Strips</ToggleButton>

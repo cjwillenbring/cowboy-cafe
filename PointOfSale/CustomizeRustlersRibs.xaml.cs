@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: CustomizeRustlersRibs
+* Purpose: Holds the class logic for the rustlers ribs customization screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

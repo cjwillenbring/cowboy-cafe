@@ -19,8 +19,8 @@
 
     <Grid>
         <StackPanel Width="300">
-            <TextBlock FontSize="20">Customize The Corn Dodgers:</TextBlock>
-            <TextBlock FontSize="18">Choose the Size value of the corn dodgers side:</TextBlock>
+            <TextBlock FontSize="20" TextWrapping="Wrap">Customize The Corn Dodgers:</TextBlock>
+            <TextBlock FontSize="18" TextWrapping="Wrap">Choose the Size value of the corn dodgers side:</TextBlock>
             <ListBox Name="myComboBox1"
                ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
                 SelectedItem="{Binding Path=Size}"/>

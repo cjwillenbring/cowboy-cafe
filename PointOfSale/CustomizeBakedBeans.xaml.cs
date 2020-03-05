@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole 
+* Class: CustomizeBakedBeans
+* Purpose: Holds the class logic for the baked beans customization screen control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
