@@ -16,11 +16,6 @@ namespace CowboyCafe.Data
     public class RustlersRibs : Entree
     {
         /// <summary>
-        /// Notify when a property has been changed
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
         /// The price of the ribs
         /// </summary>
         public override double Price

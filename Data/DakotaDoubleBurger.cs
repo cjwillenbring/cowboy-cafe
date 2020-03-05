@@ -15,11 +15,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class DakotaDoubleBurger : Entree
     {
-        /// <summary>
-        /// Notify when a property has been changed
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private bool bun = true;
         /// <summary>
         /// If the burger has a bun
