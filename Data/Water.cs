@@ -14,10 +14,20 @@ namespace CowboyCafe.Data
     /// </summary>
     public class Water : Drink
     {
+        private bool lemon = false;
         /// <summary>
         /// Whether or not the water should have a lemon
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                PropertyChangedHelper("Lemon");
+                PropertyChangedHelper("SpecialInstructions");
+            }
+        }
 
         /// <summary>
         /// Gets the price of the water

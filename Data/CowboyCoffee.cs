@@ -13,21 +13,51 @@ namespace CowboyCafe.Data
     /// A class representing the Cowboy Coffee drink
     /// </summary>
     public class CowboyCoffee : Drink
-    {
+    { 
+        private bool decaf;
         /// <summary>
         /// Whether or not the coffee should be decaf
         /// </summary>
-        public bool Decaf { get; set; }
+        public bool Decaf 
+        {
+            get { return decaf; }
+            set
+            {
+                decaf = value;
+                PropertyChangedHelper("Decaf");
+                PropertyChangedHelper("SpecialInstructions");
+            }
+        }
 
+        private bool roomForCream;
         /// <summary>
         /// Whether or not to leave room for cream
         /// </summary>
-        public bool RoomForCream { get; set; }
+        public bool RoomForCream
+        {
+            get { return roomForCream; }
+            set
+            {
+                roomForCream = value;
+                PropertyChangedHelper("RoomForCream");
+                PropertyChangedHelper("SpecialInstructions");
+            }
+        }
 
+        private bool ice = false;
         /// <summary>
         /// Whether or not the coffee has ice or not
         /// </summary>
-        public override bool Ice { get; set; } = false;
+        public override bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                PropertyChangedHelper("Ice");
+                PropertyChangedHelper("SpecialInstructions");
+            }
+        }
 
         /// <summary>
         /// Gets the price of the coffee

@@ -23,8 +23,8 @@
             <TextBlock FontSize="18" TextWrapping="Wrap">Choose the Size value of the Drink:</TextBlock>
             <ListBox Name="myComboBox1"
                ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
-                SelectedItem="{Binding Path=Size}"/>
-            <Button Content="Click To Select Size" Name="SizeBtn" Click="OnEventChange"/>
+                SelectedItem="{Binding Path=Size}"
+                SelectionChanged="OnEventChange"/>
             <ToggleButton IsChecked="{Binding Path=Lemon}" Click="OnEventChange" Margin="0 10 0 0" Height="25">Lemon</ToggleButton>
             <ToggleButton IsChecked="{Binding Path=Sweet}" Click="OnEventChange" Margin="0 10 0 0" Height="25">Sweet</ToggleButton>
         </StackPanel>

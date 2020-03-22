@@ -20,7 +20,7 @@
             <TextBlock FontSize="25">
                 Order Number: <TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
             </TextBlock>
-            <ListBox ItemsSource="{Binding Path=Items}" >
+            <ListBox ItemsSource="{Binding Path=Items}" SelectionChanged="ToggleScreen">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>

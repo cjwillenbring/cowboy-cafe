@@ -5,7 +5,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -14,7 +13,7 @@ namespace CowboyCafe.Data
     /// A class representing the Angry Chicken Sandwich entree
     /// </summary>
     public class AngryChicken : Entree
-    {
+    { 
         private bool bread = true;
         /// <summary>
         /// If the pulled pork is accompanied with bread (sandwich)
@@ -22,17 +21,28 @@ namespace CowboyCafe.Data
         public bool Bread
         {
             get { return bread; }
-            set { bread = value; }
+            set
+            {
+                bread = value;
+                PropertyChangedHelper("Bread");
+                PropertyChangedHelper("SpecialInstructions");
+            }
         }
 
         private bool pickle = true;
+
         /// <summary>
         /// If the sandwich comes with a pickle
         /// </summary>
         public bool Pickle
         {
             get { return pickle; }
-            set { pickle = value; }
+            set
+            {
+                pickle = value;
+                PropertyChangedHelper("Pickle");
+                PropertyChangedHelper("SpecialInstructions");
+            }
         }
 
         /// <summary>

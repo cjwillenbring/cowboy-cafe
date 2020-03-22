@@ -13,8 +13,13 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A base class representing an entree
     /// </summary>
-    public abstract class Entree : IOrderItem
+    public abstract class Entree : IOrderItem, INotifyPropertyChanged
     { 
+        /// <summary>
+        /// Property changed event handler
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the entree
         /// </summary>
@@ -34,5 +39,14 @@ namespace CowboyCafe.Data
         /// Implement the IOrderItem interface with the current List<string> implementation
         /// </summary>
         IEnumerable<string> IOrderItem.SpecialInstructions => SpecialInstructions;
+
+        /// <summary>
+        /// Helper method for property change event
+        /// </summary>
+        /// <param name="prop">The property being changed</param>
+        protected void PropertyChangedHelper(string prop)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+        }
     }
 }

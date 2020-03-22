@@ -23,8 +23,8 @@
             <TextBlock FontSize="18" TextWrapping="Wrap">Choose the Size value of the pan de campo side:</TextBlock>
             <ListBox Name="myComboBox1"
                ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
-                SelectedItem="{Binding Path=Size}"/>
-            <Button Content="Click To Select Size" Name="SizeBtn" Click="OnEventChange"/>
+                SelectedItem="{Binding Path=Size}"
+                SelectionChanged="OnEventChange" />
         </StackPanel>
     </Grid>
 </UserControl>

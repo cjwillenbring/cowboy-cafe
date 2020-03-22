@@ -5,6 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
@@ -13,7 +14,7 @@ namespace CowboyCafe.Data
     /// A class representing the Baked Beans Side
     /// </summary>
     public class BakedBeans : Side
-    {
+    { 
         /// <summary>
         /// Gets the price of the Baked Beans
         /// </summary>

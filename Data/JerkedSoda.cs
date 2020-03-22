@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -13,11 +14,20 @@ namespace CowboyCafe.Data
     /// A class representing the Jerked Soda drink
     /// </summary>
     public class JerkedSoda : Drink
-    {
+    { 
+        private SodaFlavor flavor;
         /// <summary>
         /// The flavor of the soda
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public SodaFlavor Flavor
+        {
+            get { return flavor; }
+            set
+            {
+                flavor = value;
+                PropertyChangedHelper("Flavor");
+            }
+        }
 
         /// <summary>
         /// Gets the price of the Jerked Soda
