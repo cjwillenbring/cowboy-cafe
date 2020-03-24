@@ -88,7 +88,7 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
         {
             var cowpokeChili = new CowpokeChili();
             Assert.PropertyChanged(cowpokeChili, "TortillaStrips", () => {
-                cowpokeChili.GreenOnions = false;
+                cowpokeChili.TortillaStrips = false;
             });
         }
 
