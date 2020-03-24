@@ -40,7 +40,6 @@ namespace CowboyCafe.Data
             {
                 sweet = value;
                 PropertyChangedHelper("Sweet");
-                PropertyChangedHelper("SpecialInstructions");
             }
         }
 
