@@ -22,12 +22,18 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
             Assert.IsAssignableFrom<INotifyPropertyChanged>(panDeCampo);
         }
 
-        // Test2: Changing "Size" should invoke "Size" Change
+        // Test2: Changing "Size" should invoke "Size, Calories, and Price" Change
         [Fact]
-        public void ChangingSizePropertyShouldInvokePropertyChangedForSize()
+        public void ChangingSizePropertyShouldInvokePropertyChangedForSizeCaloriesAndPrice()
         {
             var panDeCampo = new PanDeCampo();
             Assert.PropertyChanged(panDeCampo, "Size", () => {
+                panDeCampo.Size = Size.Small;
+            });
+            Assert.PropertyChanged(panDeCampo, "Calories", () => {
+                panDeCampo.Size = Size.Small;
+            });
+            Assert.PropertyChanged(panDeCampo, "Price", () => {
                 panDeCampo.Size = Size.Small;
             });
         }

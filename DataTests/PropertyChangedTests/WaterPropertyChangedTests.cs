@@ -22,12 +22,18 @@ namespace CowboyCafe.DataTests.PropertyChangedTests
             Assert.IsAssignableFrom<INotifyPropertyChanged>(water);
         }
 
-        // Test2: Changing "Size" should invoke "Size" Change
+        // Test2: Changing "Size" should invoke "Size, Calories, and Price" Change
         [Fact]
-        public void ChangingSizePropertyShouldInvokePropertyChangedForSize()
+        public void ChangingSizePropertyShouldInvokePropertyChangedForSizeCaloriesAndPrice()
         {
             var water = new Water();
             Assert.PropertyChanged(water, "Size", () => {
+                water.Size = Size.Small;
+            });
+            Assert.PropertyChanged(water, "Calories", () => {
+                water.Size = Size.Small;
+            });
+            Assert.PropertyChanged(water, "Price", () => {
                 water.Size = Size.Small;
             });
         }

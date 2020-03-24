@@ -32,6 +32,8 @@ namespace CowboyCafe.Data
             {
                 size = value;
                 PropertyChangedHelper("Size");
+                PropertyChangedHelper("Calories");
+                PropertyChangedHelper("Price");
             }
         }
 
