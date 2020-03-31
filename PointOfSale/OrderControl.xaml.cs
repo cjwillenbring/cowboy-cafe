@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CashRegister;
 
 namespace PointOfSale
 {
@@ -25,7 +26,7 @@ namespace PointOfSale
     public partial class OrderControl : UserControl
     {
         // Put cash drawer instance here
-        // public CashDrawer cashDrawer;
+        public CashDrawer cashDrawer;
 
         /// <summary>
         /// Initialize the Order Control class and add event handlers
@@ -37,6 +38,7 @@ namespace PointOfSale
             var data = new Order();
             DataContext = data;
             // instantiate cash drawer instance here
+            cashDrawer = new CashDrawer();
         }
 
         /// <summary>

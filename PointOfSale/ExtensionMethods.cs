@@ -27,7 +27,10 @@ namespace PointOfSale
         {
             var parent = VisualTreeHelper.GetParent(dependencyObject);
 
-            if (parent == null) return null;
+            if (parent == null)
+                parent = LogicalTreeHelper.GetParent(dependencyObject);
+            if (parent == null)
+                return null;
 
             if (parent is T) return parent as T;
 
