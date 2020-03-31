@@ -47,6 +47,17 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// Returns the subtotal plus a 16% tax
+        /// </summary>
+        public double Total
+        {
+            get
+            {
+                return Subtotal * 1.16;
+            }
+        }
+
+        /// <summary>
         /// The OrderNumber of the current order.
         /// </summary>
         public uint OrderNumber { get; } = lastOrderNumber++;

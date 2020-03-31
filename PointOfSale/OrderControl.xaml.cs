@@ -24,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        // Put cash drawer instance here
+        // public CashDrawer cashDrawer;
+
         /// <summary>
         /// Initialize the Order Control class and add event handlers
         /// </summary>
@@ -33,6 +36,7 @@ namespace PointOfSale
             
             var data = new Order();
             DataContext = data;
+            // instantiate cash drawer instance here
         }
 
         /// <summary>
@@ -55,7 +59,6 @@ namespace PointOfSale
         {
             var selectScreen = new MenuItemSelectionControl();
             SwapScreen(selectScreen);
-            return;
         }
 
         /// <summary>
@@ -75,7 +78,10 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderClick(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+            var transactionControl = new TransactionControl();
+            SwapScreen(transactionControl);
+            ButtonContainer.Visibility = Visibility.Collapsed;
+            Container2.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
@@ -85,6 +91,20 @@ namespace PointOfSale
         public void SwapScreen(UIElement element)
         {
             Container.Child = element;
+        }
+
+        /// <summary>
+        /// Updates the data context to be a new order
+        /// </summary>
+        public void NewOrder()
+        {
+            ItemSelectionButton.IsEnabled = true;
+            OrderCompleteButton.IsEnabled = true;
+            OrderCancelButton.IsEnabled = true;
+            SwapScreen(new MenuItemSelectionControl());
+            this.DataContext = new Order();
+            ButtonContainer.Visibility = Visibility.Visible;
+            Container2.Visibility = Visibility.Visible;
         }
     }
 }
