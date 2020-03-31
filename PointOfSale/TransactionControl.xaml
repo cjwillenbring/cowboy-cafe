@@ -18,18 +18,19 @@
         <Grid Name="BottomGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="470"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <TextBlock FontSize="30" Grid.Row="0">Transaction Window Order Information:</TextBlock>
-            <StackPanel Grid.Row="1">
-                <TextBlock FontSize="25">
+            <TextBlock FontSize="25" Grid.Row="1">
                 Order Number: <TextBlock Text="{Binding Path=OrderNumber}"></TextBlock>
             </TextBlock>
-            <Border x:Name="TransactionContainer">
+            <Border x:Name="TransactionContainer" Height="350" Grid.Row="2">
                 <ListBox ItemsSource="{Binding Path=Items}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -50,15 +51,13 @@
                 </ListBox.ItemTemplate>
             </ListBox>
             </Border>
-            <TextBlock FontSize="25">
-            Subtotal: <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" TextAlignment="Right"></TextBlock><LineBreak/>
-            Total: <TextBlock Text="{Binding Path=Total, StringFormat=c}"></TextBlock>
+            <TextBlock FontSize="25" Name="TotalText" Grid.Row="3">
+                Subtotal: <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" TextAlignment="Right"></TextBlock><LineBreak/>
+                Total: <TextBlock Text="{Binding Path=Total, StringFormat=c}"></TextBlock>
             </TextBlock>
-            </StackPanel>
-            <Button Grid.Row="2" Click="OnPayWithCardClick" Name="CardButton">Pay With Card</Button>
-            <Button Grid.Row="3" Click="OnPayWithCashClick">Pay With Cash</Button>
-            <Button Grid.Row="4" Click="OnCancelOrderClick">Cancel Order</Button>
-            <Button Grid.Row="5" Click="OnCompleteOrderClick">Complete Order</Button>
+            <Button Grid.Row="4" Click="OnPayWithCardClick" Name="CardButton">Pay With Card</Button>
+            <Button Grid.Row="5" Click="OnPayWithCashClick" Name="CashButton">Pay With Cash</Button>
+            <Button Grid.Row="6" Click="OnCancelOrderClick">Cancel Transaction</Button>
         </Grid>
     </Grid>
 </UserControl>

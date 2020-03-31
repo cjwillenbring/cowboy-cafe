@@ -78,10 +78,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderClick(object sender, RoutedEventArgs e)
         {
-            var transactionControl = new TransactionControl();
-            SwapScreen(transactionControl);
-            ButtonContainer.Visibility = Visibility.Collapsed;
-            Container2.Visibility = Visibility.Collapsed;
+            if(this.DataContext is Order o)
+            {
+                if(o.Subtotal > 0)
+                {
+                    var transactionControl = new TransactionControl();
+                    SwapScreen(transactionControl);
+                    ButtonContainer.Visibility = Visibility.Collapsed;
+                    Container2.Visibility = Visibility.Collapsed;
+                }
+            }
         }
 
         /// <summary>

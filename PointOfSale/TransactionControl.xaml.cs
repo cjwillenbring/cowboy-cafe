@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Cole Willenbring
+* Class: TransactionControl
+* Purpose: Holds the ui logic for the transaction control
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,11 +26,8 @@ namespace PointOfSale
     public partial class TransactionControl : UserControl
     {
         /// <summary>
-        /// Order control property used for persisting changes in child elements 
-        /// up to the parent window control elements
+        /// Public constructor for the transaction control window control object class
         /// </summary>
-        private OrderControl orderControl;
-
         public TransactionControl()
         {
             InitializeComponent();
@@ -40,17 +42,6 @@ namespace PointOfSale
         {
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.NewOrder();
-        }
-
-        /// <summary>
-        /// Handles the click event for the complete order button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void OnCompleteOrderClick(object sender, RoutedEventArgs e)
-        {
-            
-
         }
 
         /// <summary>
@@ -75,6 +66,7 @@ namespace PointOfSale
                     }
                 }
             */
+            PrintReciept(true);
         }
 
         /// <summary>
@@ -84,10 +76,10 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnPayWithCashClick(object sender, RoutedEventArgs e)
         {
-            /* var orderControl = this.FindAncestor<OrderControl>();
-               orderControl.NewOrder();
-               orderControl.cashDrawer;
-             */
+            var cashControl = new CashControl();
+            TransactionContainer.Child = cashControl;
+            CashButton.IsEnabled = false;
+            CardButton.IsEnabled = false;
         }
 
         /// <summary>
@@ -96,7 +88,7 @@ namespace PointOfSale
         /// <param name="credit">Whether or not a card was used</param>
         /// <param name="paid">The amount paid in cash if applicable</param>
         /// <param name="change">The change received if applicable</param>
-        void PrintReciept(bool credit, double paid=0.00, double change=0.00)
+        public void PrintReciept(bool credit, double paid=0.00, double change=0.00)
         {
             StringBuilder sb = new StringBuilder();
             if (DataContext is Order order)
@@ -111,18 +103,20 @@ namespace PointOfSale
                         sb.Append("\t" + s + "\n");
                     }
                 }
-                sb.Append(order.Subtotal + "\n");
-                sb.Append(order.Total + "\n");
+                sb.Append("Subtotal: " + order.Subtotal.ToString("C2") + "\n");
+                sb.Append("Total: " + order.Total.ToString("C2") + "\n");
                 if(credit) sb.Append("CREDIT");
                 else
                 {
                     sb.Append("CASH" + "\n");
-                    sb.Append("Paid: " + paid + "\n");
-                    sb.Append("Change: " + change + "\n");
+                    sb.Append("Paid: " + paid.ToString("C2") + "\n");
+                    sb.Append("Change: " + change.ToString("C2") + "\n");
                 }
             }
             string toPrint = sb.ToString();
             //Print(sb.ToString());
+            var orderControl = this.FindAncestor<OrderControl>();
+            orderControl.NewOrder();
         }
 
         /// <summary>
