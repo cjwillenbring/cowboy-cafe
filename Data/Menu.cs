@@ -3,9 +3,7 @@
 * Class: Menu
 * Purpose: Holds the class logic for the Menu class to help abstract some of the web rendering
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {
@@ -65,10 +63,51 @@ namespace CowboyCafe.Data
             return drinksIE;
         }
 
-        public static IOrderItem ChangeSizeOfSide(Side side, Size s)
+        /// <summary>
+        /// Gets an enumerable of the complete menu
+        /// </summary>
+        /// <returns>An enumerable of drink order items</returns>
+        public static IEnumerable<IOrderItem> CompleteMenu()
+        {
+            List<IOrderItem> menu = new List<IOrderItem>();
+            menu.Add(new AngryChicken());
+            menu.Add(new CowpokeChili());
+            menu.Add(new DakotaDoubleBurger());
+            menu.Add(new RustlersRibs());
+            menu.Add(new TexasTripleBurger());
+            menu.Add(new TrailBurger());
+            menu.Add(new PecosPulledPork());
+            menu.Add(new JerkedSoda());
+            menu.Add(new Water());
+            menu.Add(new CowboyCoffee());
+            menu.Add(new TexasTea());
+            menu.Add(new BakedBeans());
+            menu.Add(new ChiliCheeseFries());
+            menu.Add(new CornDodgers());
+            menu.Add(new PanDeCampo());
+
+            IEnumerable<IOrderItem> menuIE = menu;
+            return menuIE;
+        }
+
+        /// <summary>
+        /// Updates the size state of the passed in side object
+        /// </summary>
+        /// <param name="side">The side object passed in</param>
+        /// <param name="s">The desired size</param>
+        public static void ChangeSideSize(Side side, Size s)
         {
             side.Size = s;
-            return side;
+        }
+
+        /// <summary>
+        /// Updates the size state of the passed in drink object
+        /// </summary>
+        /// <param name="drink">The drink object passed in</param>
+        /// <param name="s">The desired size</param>
+        public static void ChangeDrinkSize(Drink drink, Size s)
+        {
+            drink.Size = s;
         }
     }
 }
