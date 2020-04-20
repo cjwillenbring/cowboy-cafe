@@ -21,6 +21,11 @@ namespace CowboyCafe.Data
         public double Price { get; }
 
         /// <summary>
+        /// Getter for the calories of the item.
+        /// </summary>
+        public uint Calories { get; }
+
+        /// <summary>
         /// Getter for the instructions for preparation.
         /// </summary>
         public IEnumerable<string> SpecialInstructions { get; }
